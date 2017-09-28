@@ -16,8 +16,8 @@
     </section>
     <section class="rightbox">
       <div class="introbox">
-        <p><b>红花会（RedFlowerClub）</b>，中国地下私募组织，致力于投资和慈善；</p>
-        <p class="tips">暂不对外开放。</p>
+        <p><b>{{cnTittle}}（{{enTittle}}）</b>，{{intro}}；</p>
+        <p class="notice">{{notice}}</p>
       </div>
     </section>
   </div>
@@ -29,7 +29,9 @@ export default {
   data () {
     return {
       enTittle: 'Red Flower Club',
-      cnTittle: '红花会'
+      cnTittle: '红花会',
+      intro: '中国地下私募组织，致力于投资和慈善',
+      notice: '暂不对外开放'
     }
   }
 }
@@ -107,7 +109,7 @@ input::placeholder {
   font-size: 1.8rem;
 }
 
-.rightbox .tips {
+.rightbox .notice {
   font-size: 2.4rem;
   font-weight: bold;
   color: #E34C41;
