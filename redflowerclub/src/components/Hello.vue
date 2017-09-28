@@ -11,7 +11,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      enMsg: 'Welcome to Your Red Flower Club',
+      enMsg: 'Welcome to Red Flower Club',
       cnMsg: '欢迎来到红花会'
     }
   }
