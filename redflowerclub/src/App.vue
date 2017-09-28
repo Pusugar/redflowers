@@ -24,11 +24,11 @@ html, body {
 
 html, body, .wrapper, .leftbox, .rightbox {
   min-height: 100vh;
-  height: 100vh;
 }
 
 input, button {
   outline: none;
+  border-radius: 0;
 }
 
 #app {
@@ -37,31 +37,38 @@ input, button {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #FFF;
-  min-height: 100%;
 }
 
 .wrapper {
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   justify-content: center;
 }
 
-.leftbox {
+.leftbox, .rightbox{
   flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftbox {
   background: #E34C41;
 }
 
 .rightbox {
-  flex: 1;
   background: #FFF;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
+}
 
+@media(max-width: 736px){
+  .wrapper {
+    flex-direction: column;
+  }
+  .leftbox, .rightbox {
+    flex: auto;
+  }
 }
 
 </style>

@@ -1,17 +1,17 @@
 <template>
   <div class="index wrapper">
     <section class="leftbox">
-      <div class="flexbox">
-        <div class="logobox">
-          <img src="../assets/logo-white.png" alt="logo" class="logo" width="98" height="98">
-          <h1> {{ enTittle }} </h1>
-          <h1> {{ cnTittle }} </h1>
+      <div class="logobox">
+        <div class="logo">
+          <img src="../assets/logo-white.png" alt="logo" width="98" height="98">
         </div>
-        <div class="loginbox">
-          <input type="text" name="" value="" placeholder="User">
-          <input type="password" name="" value="" placeholder="Password">
-          <button type="submit" name="button" class="loginbtn">Login</button>
-        </div>
+        <h2> {{ enTittle }} </h2>
+        <h1> {{ cnTittle }} </h1>
+      </div>
+      <div class="loginbox">
+        <input type="text" name="" value="" placeholder="User">
+        <input type="password" name="" value="" placeholder="Password">
+        <button type="submit" name="button" class="loginbtn">Login</button>
       </div>
     </section>
     <section class="rightbox">
@@ -37,31 +37,35 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
+h1, h2{
   color: #FFF;
-  font-size: 2.4rem;
   margin: 0 0 1rem 0;
-  line-height: 2.4rem;
 }
 
-.logobox {
-  margin: 80px 0;
+h1 {
+  font-size: 4.2rem;
 }
 
-.logo {
+h2 {
+  font-size: 2.4rem;
+}
+
+.logobox, .loginbox {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo img {
   margin-bottom: 1rem;
   transition: all 1s ease-in-out;
 }
 
-.logo:hover {
+.logo img:hover {
   transform: rotate(360deg);
-}
-
-.loginbox {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 input {
@@ -75,6 +79,7 @@ input {
   color: #FFF;
   font-size: 1.8rem;
 }
+
 input::placeholder {
   font-size: 1.8rem;
   color: rgba(255,255,255,0.8);
@@ -84,7 +89,7 @@ input::placeholder {
   color: #FFF;
   background: transparent;
   border: 1px solid #FFF;
-  line-height: 4rem;
+  line-height: 4.8rem;
   width: 50%;
   margin-top: 2rem;
   font-size: 1.8rem;
@@ -107,5 +112,11 @@ input::placeholder {
   font-weight: bold;
   color: #E34C41;
   margin-top: 4rem;
+}
+
+@media(max-width: 736px){
+  input, .loginbtn{
+    width: 70%
+  }
 }
 </style>
